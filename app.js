@@ -5,15 +5,18 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const mainRoutes = require('./routes/cafe');
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+const cafeRoutes = require('./routes/cafe');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(mainRoutes);
+app.use(cafeRoutes);
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+  res.status(404).render('404', { pageTitle: 'Page Not Found', path: 'Error' });
 });
 
 app.listen(3000);
