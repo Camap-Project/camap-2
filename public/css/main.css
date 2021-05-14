@@ -1,8 +1,22 @@
+/* 한글 font만 가져오기 */
 @font-face {
-  font-family: 'Gaegu', cursive;
+  font-family: 'Gaegu';
   font-style: normal;
-  src: url("/fonts/Gaegu-Regular.ttf") format('truetype');
-  unicode-range: U+AC00-D7A3;
+  src: url('/fonts/Gaegu-Regular.ttf') format('truetype');
+  /*  
+    U+AC00-D7A3 : 한글
+    U+003F : 물음표
+  */
+  unicode-range: U+AC00-D7A3, U+003F;
+}
+
+/* * : 전체에 적용 */
+* {
+  /* 
+    - 영어는 'Cabin Sketch' 적용, 한글은 'Gaegu' 적용
+    - !important : 우선순위 제일 상위로!
+  */
+  font-family: 'Cabin Sketch','Gaegu' !important;
 }
 
 main {
