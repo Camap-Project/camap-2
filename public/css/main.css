@@ -1,30 +1,28 @@
-/* body {
-  position: relative;
+@font-face {
+  font-family: 'Gaegu', cursive;
+  font-style: normal;
+  src: url("/fonts/Gaegu-Regular.ttf") format('truetype');
+  unicode-range: U+AC00-D7A3;
 }
-body::before {
-  position: absolute;
-  background-image: url("/img/main-background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 40rem;
-  opacity: 0.8;
-} */
 
 main {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.main-background {
+  background-image: url("/img/Coffee.jpg"), url("/img/Croissant.jpg");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  background-size: contain;
 }
 
 .main-header {
-  width: 100%;
   height: 3.5rem;
-  background-color: #fcaa4d;
-  padding: 0 1.5rem;
-}
-
-.main-header__nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  margin: 1rem;
+  /* display: flex;
+  align-items: center; */
+  /* background 그라디에이션 조절 */
+  background: linear-gradient( 45deg, #efffdb, #ade664);
 }
 
 .main-header__item-list {
@@ -41,11 +39,17 @@ main {
 
 .main-header__item a {
   text-decoration: none;
-  color: black;
 }
 
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: blueviolet;
+  /* text 밑줄 제거 */
+  text-decoration: none !important;
+  color: #83431e;
+}
+
+.fakeimg {
+  height: 200px;
+  background: #aaa;
 }
