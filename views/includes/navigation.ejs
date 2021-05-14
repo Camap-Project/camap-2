@@ -1,10 +1,10 @@
-<header class="main-header fluid-container">
-    <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-            <li class="main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Main</a></li>
-            <li class="main-header__item"><a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a></li>
-            <li class="main-header__item"><a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Sign Up</a></li>
-            <li class="main-header__item"><a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage">My Page</a></li>
+<header>
+    <nav class="navbar navbar-expand-sm main-header fluid-container justify-content-end">
+        <li class="navbar-brand main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Main</a></li>
+        <ul class="navbar-nav main-header__item-list justify-content-end">
+            <li class="nav-item main-header__item"><a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a></li>
+            <li class="nav-item main-header__item"><a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Sign Up</a></li>
+            <li class="nav-item main-header__item"><a class="<%= path === '/mypage' ? 'active' : '' %>" href="/mypage">My Page</a></li>
         </ul>
     </nav>
 </header>
