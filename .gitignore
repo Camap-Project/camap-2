@@ -1,3 +1,5 @@
 node_modules
 
-material-design-icons
+package-lock.json
+
+package.json
